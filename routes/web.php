@@ -21,3 +21,6 @@ Route::get('/', function () {
 Route::get('users', [HomeController::class, 'index'])->name('users.index');
 Route::post('userspost', [HomeController::class, 'UserPost'])->name('users.post');
 Route::get('/fetch_data', [HomeController::class, 'FetchData'])->name('users.fetch');
+Route::get('/edit_student/{id}',[HomeController::class,'EditStudent'])->name('student.edit');
+Route::put('/update_stu/{id}',[HomeController::class,'UpdateStudent']);
+Route::delete('/delete-student/{id}',[HomeController::class,'DeleteStudent']);
